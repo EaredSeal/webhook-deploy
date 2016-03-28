@@ -1,0 +1,25 @@
+{
+  "name": "webhook-deploy",
+  "version": "1.0.0",
+  "description": "webhook deploy for github,gitlab,bitbucket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otarim/webhook-deploy.git"
+  },
+  "keywords": [
+    "webhook",
+    "deploy",
+    "gitlab",
+    "github.bitbucket"
+  ],
+  "author": "otarim.com@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otarim/webhook-deploy/issues"
+  },
+  "homepage": "https://github.com/otarim/webhook-deploy#readme"
+}

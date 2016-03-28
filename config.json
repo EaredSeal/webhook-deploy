@@ -1,0 +1,20 @@
+{
+    "port": 8890,
+    "deploys": [
+        {
+            "name": "uploader",
+            "path": "/deploy/uploader",
+            "type": "bitbucket",
+            "action": {
+                "push": "/misaka/uploader/deploy.sh"
+            }
+        },{
+            "name": "mblog",
+            "path": "/deploy/mblog",
+            "type": "bitbucket",
+            "action": {
+                "push": "/misaka/mblog/deploy.sh"
+            }
+        }
+    ]
+}
