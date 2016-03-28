@@ -6,14 +6,22 @@
             "path": "/deploy/uploader",
             "type": "bitbucket",
             "action": {
-                "push": "/misaka/uploader/deploy.sh"
+                "push": "/uploader.sh"
             }
         },{
-            "name": "mblog",
-            "path": "/deploy/mblog",
-            "type": "bitbucket",
+            "name": "github",
+            "path": "/deploy/github",
+            "type": "github",
+            "secret": "12345678",
             "action": {
-                "push": "/misaka/mblog/deploy.sh"
+                "push": "/github.sh"
+            }
+        },{
+            "name": "gitlab",
+            "path": "/deploy/gitlab",
+            "type": "gitlab",
+            "action": {
+                "push": "/gitlab.sh"
             }
         }
     ]
