@@ -106,16 +106,17 @@ var handler = function(req,res,task) {
             return errorHandler(res,'X-Hub-Signature does not match blob signature',400)
         }
     }
-
+    
+    // compatible
     if(type === 'gitlab'){
-        var xHeader = req.headers['x-gitlab-event']
-
-        if(!xHeader){
-            return errorHandler(res,'No X-Gitlab-Event found on request',401)
+        if(payload.hasOwnProperty('commits')){
+                event = 'push'
+        }else{
+                event = payload.object_kind
         }
-        
-        event = payload.object_kind
-        
+        if(!event){
+                return errorHandler(res,'No gitlab event found on request',401)
+        }
         if (!payload || !payload.repository || !payload.repository.name) {
             return errorHandler(res,'received invalid data from ' + req.headers['host'] + ', returning 400',400)
         }
